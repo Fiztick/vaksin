@@ -36,8 +36,14 @@ class Hafiz_PendaftaranAdapter(private val pendaftaranList: ArrayList<Hafiz_Pend
 
         holder.img_pendaftar.setImageBitmap(myBitmap)
         holder.nama_pendaftar.text = currentItem.nama_pendaftar.toString()
-        holder.jenis_kelamin_pendaftar.text = currentItem.jenis_kelamin_pendaftar.toString()
+
         holder.umur_pendaftar.text = currentItem.umur_pendaftar.toString()
+
+        if (currentItem.jenis_kelamin_pendaftar.toString() == "2131230733") {
+            holder.jenis_kelamin_pendaftar.text = "Laki - laki"
+        } else {
+            holder.jenis_kelamin_pendaftar.text = "Perempuan"
+        }
 
         holder.itemView.setOnClickListener {
             val activity = it.context as AppCompatActivity

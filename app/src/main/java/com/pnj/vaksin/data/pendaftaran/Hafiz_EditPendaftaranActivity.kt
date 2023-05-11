@@ -142,9 +142,9 @@ class Hafiz_EditPendaftaranActivity : AppCompatActivity() {
         val nik_pendaftar = binding.TxtEditNik.text.toString().toInt()
         val nama_pendaftar = binding.TxtEditNama.text.toString()
         val umur_pendaftar = binding.TxtEditUmur.text.toString().toInt()
-        val jenis_kelamin_pendaftar = resources.getResourceEntryName(binding.RadioEditJenisKelamin.checkedRadioButtonId)
         var penyakit_bawaan_pendaftar = binding.TxtEditPenyakitBawaan.text.toString()
         var foto_final_dir : String = old_foto_dir
+        val jenis_kelamin_pendaftar = binding.RadioEditJenisKelamin.checkedRadioButtonId
 
         if (new_foto_dir != "") {
             foto_final_dir = new_foto_dir
