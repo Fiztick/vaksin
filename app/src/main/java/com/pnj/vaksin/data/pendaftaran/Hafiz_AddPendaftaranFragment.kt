@@ -59,7 +59,14 @@ class Hafiz_AddPendaftaranFragment : BottomSheetDialogFragment() {
         val nama_pendaftar = binding.TxtNama.text.toString()
         val umur_pendaftar = binding.TxtUmur.text.toString().toInt()
         var penyakit_bawaan_pendaftar = binding.TxtPenyakitBawaan.text.toString()
-        val jenis_kelamin_pendaftar = binding.RadioJenisKelamin.checkedRadioButtonId
+        val id_gender = resources.getResourceEntryName(binding.RadioJenisKelamin.checkedRadioButtonId)
+        var jenis_kelamin_pendaftar : String = ""
+
+        if (id_gender == "RadioLaki") {
+            jenis_kelamin_pendaftar = "Laki - laki"
+        } else {
+            jenis_kelamin_pendaftar = "Perempuan"
+        }
 
         Log.e("nik", nik_pendaftar.toString())
         Log.e("nama", nama_pendaftar.toString())

@@ -140,7 +140,7 @@ class Hafiz_PendaftaranActivity : AppCompatActivity() {
                     // konversi dar dir string ke dir file
                     val foto_delete = File(imagesDir, pendaftarList[position].foto_pendaftar)
 
-                    if(foto_delete.exists()) {
+                    if(!foto_delete.exists()) {
                         // foto ada di dalam galery
                         if(foto_delete.delete()) {
                             // foto di delete
